@@ -4,5 +4,5 @@
   "version": "0.2.1",
   "description": "kyrie.風のテーマ。PCは左にメニューを置く二カラム、スマホは一カラム。",
   "author": "mine sakisaka",
-  "requires_tomos": "0.6.0"
+  "requires_tomos": "1.3.1"
 }
