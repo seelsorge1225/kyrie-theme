@@ -23,6 +23,7 @@
   --k-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   --k-sans: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
   --k-serif: "Noto Serif JP", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "YuMincho", "MS PMincho", serif;
+  --k-body-weight: 500;    /* 記事本文の字の太さ（400=標準、500=やや太め、太字は700） */
   --k-body-line: 2;        /* 記事本文の行送り（文字サイズの倍数） */
   --k-para-gap: 1.9em;     /* 記事本文の段落間の空き（空行1行分ほど） */
   --k-width: 720px;
@@ -360,8 +361,10 @@ img { max-width: 100%; height: auto; }
 /* 記事本文：明朝体・広めの行送り。見出しはこれまでどおりゴシック体 */
 .page-content {
   font-family: var(--k-serif);
+  font-weight: var(--k-body-weight);
   line-height: var(--k-body-line);
 }
+.page-content strong, .page-content b { font-weight: 700; }
 .page-content > :first-child { margin-top: 0; }
 .page-content > :last-child { margin-bottom: 0; }
 .page-content h1, .page-content h2, .page-content h3,
