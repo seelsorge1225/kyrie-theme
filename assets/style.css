@@ -2,8 +2,8 @@
 
 :root {
   color-scheme: light;
-  --k-bg: #ffffff;
-  --k-surface: #ffffff;
+  --k-bg: #faf9f6;
+  --k-surface: #faf9f6;
   --k-text: #2c3e50;
   --k-muted: #6b7a8a;
   --k-border: #d1d9e0;
@@ -19,12 +19,13 @@
   --k-danger-text: #8a2e26;
   --k-danger-border: #d9a39e;
   --k-shadow: 0 18px 46px rgb(44 62 80 / 8%);
-  --k-overlay: rgb(255 255 255 / 100%);
+  --k-overlay: rgb(250 249 246 / 100%);
   --k-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   --k-sans: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
   --k-serif: "Noto Serif JP", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Yu Mincho", "YuMincho", "MS PMincho", serif;
-  --k-body-weight: 500;    /* 記事本文の字の太さ（400=標準、500=やや太め、太字は700） */
-  --k-body-line: 2;        /* 記事本文の行送り（文字サイズの倍数） */
+  --k-body-size: 1.125rem; /* 記事本文の文字サイズ（1rem=16px。1.125rem=18px） */
+  --k-body-weight: 400;    /* 記事本文の字の太さ（400=標準、500=やや太め、太字は700） */
+  --k-body-line: 1.9;      /* 記事本文の行送り（文字サイズの倍数） */
   --k-para-gap: 1.9em;     /* 記事本文の段落間の空き（空行1行分ほど） */
   --k-width: 720px;
 }
@@ -106,8 +107,8 @@ img { max-width: 100%; height: auto; }
   }
   .theme-toggle-input:checked ~ .site,
   .theme-toggle-input:checked ~ .theme-toggle {
-    --k-bg: #ffffff;
-    --k-surface: #ffffff;
+    --k-bg: #faf9f6;
+    --k-surface: #faf9f6;
     --k-text: #2c3e50;
     --k-muted: #6b7a8a;
     --k-border: #d1d9e0;
@@ -123,7 +124,7 @@ img { max-width: 100%; height: auto; }
     --k-danger-text: #8a2e26;
     --k-danger-border: #d9a39e;
     --k-shadow: 0 18px 46px rgb(44 62 80 / 8%);
-    --k-overlay: rgb(255 255 255 / 100%);
+    --k-overlay: rgb(250 249 246 / 100%);
   }
 }
 
@@ -361,6 +362,7 @@ img { max-width: 100%; height: auto; }
 /* 記事本文：明朝体・広めの行送り。見出しはこれまでどおりゴシック体 */
 .page-content {
   font-family: var(--k-serif);
+  font-size: var(--k-body-size);
   font-weight: var(--k-body-weight);
   line-height: var(--k-body-line);
 }
