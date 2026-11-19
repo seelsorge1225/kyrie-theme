@@ -400,9 +400,33 @@ img { max-width: 100%; height: auto; }
   border-radius: 4px;
   color: var(--k-code-text);
   overflow-x: auto;
-  padding: 1rem;
+  line-height: 1.6;
+  padding: 2rem 1rem 1rem;
+  position: relative;
+  /* 画面端で折り返して表示（横スクロールなし） */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  /* タップ／クリックでブロック全体を選択 */
+  -webkit-user-select: all;
+  user-select: all;
 }
-.page-content pre code { background: transparent; color: inherit; padding: 0; }
+.page-content pre::before {
+  content: "タップで全選択";
+  color: var(--k-muted);
+  font-family: var(--k-sans);
+  font-size: 0.7rem;
+  line-height: 1;
+  pointer-events: none;
+  position: absolute;
+  right: 0.7rem;
+  top: 0.6rem;
+  -webkit-user-select: none;
+  user-select: none;
+}
+@media (hover: hover) {
+  .page-content pre::before { content: "クリックで全選択"; }
+}
+.page-content pre code { background: transparent; color: inherit; padding: 0; white-space: inherit; overflow-wrap: inherit; }
 .page-content .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .page-content .table-scroll table { margin: 0; }
 .page-content table { border-collapse: collapse; font-size: 0.94rem; min-width: 560px; width: 100%; }
